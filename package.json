@@ -1,0 +1,16 @@
+{
+  "title": "YoutubePlayer",
+  "name": "YoutubePlayer",
+  "version": "0.0.1",
+  "description": "A plugin to manage the youtube player.",
+  "main": "index.js",
+  "author": "Gustav Jonsson",
+  "engines": {
+    "firefox": ">=38.0a1",
+    "fennec": ">=38.0a1"
+  },
+  "license": "MIT",
+  "keywords": [
+    "jetpack"
+  ]
+}
