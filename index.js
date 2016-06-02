@@ -59,6 +59,3 @@ var bindHotKey = Hotkey({
   combo: config.bindPlayerKey,
   onPress: bindPlayer,
 });
-
-var tabs = require("sdk/tabs");
-tabs.open("https://www.youtube.com/watch?v=PaFhTYPFG1Y")
