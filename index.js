@@ -10,52 +10,30 @@ var tabs = require("sdk/tabs");
  * Library requires
  */
 var config = require("lib/config");
-var player = require("lib/player");
-
-/*
- * Application wide variables.
- */
-var playerTab = tabs.activeTab;
-var playerFlag = false;
-
-playerTab.on("close",function(tab) {
-    setPlayerFlag(false);
-});
-
-function setPlayerFlag(val) {
-  playerFlag = val;
-  console.log("Toggled playerFlag to: " + playerFlag);
-}
+var player = require("lib/player").init();
+var panel = require("lib/panel");
 
 
-function bindPlayer() {
-  setPlayerFlag(true);
-  playerTab = tabs.activeTab;
-  
-}
 
 /*
  * Bind functionality.
  */
 var nextSongHotKey = Hotkey({
- combo: config.nextKey,
-  onPress: () => {
-    if (playerFlag) {
-      player.next(playerTab)
-    }
-  },
+  combo: config.nextKey,
+  onPress: player.next,
 });
 
 var playHotKey = Hotkey({
   combo: config.playKey,
-  onPress: () => {
-    if (playerFlag) {
-      player.play(playerTab);
-    }
-  }
+  onPress: player.play,
 });
 
 var bindHotKey = Hotkey({
   combo: config.bindPlayerKey,
-  onPress: bindPlayer,
+  onPress: player.bindPlayer,
+});
+
+var searchHotKey = Hotkey({
+  combo: config.startSearchKey,
+  onPress: panel.initSearch,
 });
