@@ -11,9 +11,7 @@ var tabs = require("sdk/tabs");
  */
 var config = require("lib/config");
 var player = require("lib/player").init();
-var panel = require("lib/panel");
-
-
+var panel = require("lib/panel").init(player);
 
 /*
  * Bind functionality.

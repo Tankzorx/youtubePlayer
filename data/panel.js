@@ -1,5 +1,5 @@
 var textArea = document.getElementById("edit-box");
-textArea.focus();
+
 textArea.addEventListener('keyup', function onkeyup(event) {
   if (event.keyCode == 13) {
     // Remove the newline.
@@ -14,6 +14,6 @@ textArea.addEventListener('keyup', function onkeyup(event) {
 //
 // Set the focus to the text area so the user can
 // just start typing.
-// self.port.on("show", function onShow() {
-  
-// });
+self.port.on("show", function onShow() {
+  textArea.focus();
+});
