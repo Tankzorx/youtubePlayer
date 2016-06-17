@@ -1,6 +1,6 @@
 {
   "title": "YoutubePlayer",
-  "name": "YoutubePlayer",
+  "name": "youtubeplayer",
   "version": "0.0.1",
   "description": "A plugin to manage the youtube player.",
   "main": "index.js",

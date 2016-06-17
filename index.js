@@ -35,3 +35,8 @@ var searchHotKey = Hotkey({
   combo: config.startSearchKey,
   onPress: panel.initSearch,
 });
+
+var testHotKey = Hotkey({
+  combo: config.filler,
+  onPress: player.test,
+});
