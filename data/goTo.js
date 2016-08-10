@@ -6,11 +6,10 @@ function goToVid() {
 			goToVid();
 		}, 50);
 	} else {
-		var id = searchResults[1].getAttribute("data-context-item-id");
+		var id = searchResults[0].getAttribute("data-context-item-id");
 		console.log(id);
 		self.port.emit("foundId",id);
 		return;
 	}
-
 };
 goToVid();
