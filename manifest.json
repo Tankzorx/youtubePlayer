@@ -1,0 +1,61 @@
+{
+
+  "manifest_version": 2,
+  "name": "youtubePlayer",
+  "version": "2.0",
+
+  "description": "Turns firefox into a minimalistic music player, using youtube.",
+  "homepage_url": "https://github.com/Tankzorx/youtubePlayer",
+
+  "content_security_policy": "script-src 'self' https://www.youtube.com/iframe_api https://s.ytimg.com/yts/jsbin/www-widgetapi-vfl_6Wqon/www-widgetapi.js; object-src 'self'",
+
+  "permissions": [
+    "tabs"
+  ],
+
+  "commands": {
+            "nextKey": {
+              "suggested_key": {
+                "default": "Alt+Shift+D"
+              }
+            },
+            "playKey": {
+              "suggested_key": {
+                "default": "Alt+Shift+S"
+              }
+            },
+            "volDownKey": {
+              "suggested_key": {
+                "default": "Alt+Shift+E"
+              }
+            },
+            "volUpKey": {
+              "suggested_key": {
+                "default": "Alt+Shift+W"
+              }
+            },
+            "bindPlayerKey": {
+              "suggested_key": {
+                "default": "Alt+Shift+A"
+              }
+            },
+            "startSearchKey": {
+              "suggested_key": {
+                "default": "Alt+Shift+Q"
+              }
+            },
+
+            "filler": {
+              "suggested_key": {
+                "default": "Alt+Shift+W"
+              }
+            }
+          },
+
+
+
+  "background" : {
+    "page" : "player.html"
+  }
+
+}
